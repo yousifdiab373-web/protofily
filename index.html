@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youssef Diab | Backend .NET Developer</title>
+  <meta name="description" content="Youssef Diab — Backend .NET developer building secure, scalable and clean RESTful APIs with C#, ASP.NET Core and SQL Server." />
+  <meta name="theme-color" content="#1f3157" />
+
+  <!-- Apply saved theme before paint (prevents a white flash in dark mode) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="Youssef Diab — home">
+        <span class="logo-mark">YD</span><span class="logo-text">Youssef<span class="dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon icon-moon"></i>
+          <i class="fa-solid fa-sun icon-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Talk</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="status-badge"><span class="pulse"></span> Open to work &amp; collaborations</span>
+
+          <h1 class="hero-title">
+            <span class="hello">Hi, I'm</span>
+            <span class="grad-text">Youssef Diab</span>
+          </h1>
+
+          <h2 class="hero-role">
+            I'm a <span class="typed" id="typed"></span><span class="cursor" aria-hidden="true">|</span>
+          </h2>
+
+          <p class="hero-desc">
+            Backend developer specialized in the <strong>.NET</strong> ecosystem. I design and build secure,
+            scalable and well-structured RESTful APIs using <strong>C#</strong>, <strong>ASP.NET Core</strong>
+            and <strong>SQL Server</strong>.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+            <!-- Put your CV file next to index.html and keep this name (or change it) -->
+            <a href="Youssef-Diab-CV.pdf" class="btn btn-outline" download><i class="fa-solid fa-download"></i> Download CV</a>
+          </div>
+
+          <ul class="socials" aria-label="Social links">
+            <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-wrap">
+            <img src="profile.jpg" alt="Portrait of Youssef Diab" width="844" height="920" />
+
+            <div class="float-chip chip-1"><i class="fa-solid fa-code"></i> C#</div>
+            <div class="float-chip chip-2"><i class="fa-solid fa-server"></i> ASP.NET Core</div>
+            <div class="float-chip chip-3"><i class="fa-solid fa-database"></i> SQL Server</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <!-- EDIT the numbers below (data-count) to match your real stats -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-card reveal">
+          <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span><p>Projects Built</p></div>
+          <div class="stat"><span class="stat-num" data-count="15">0</span><span class="stat-plus">+</span><p>Technologies &amp; Tools</p></div>
+          <div class="stat"><span class="stat-num" data-count="1000">0</span><span class="stat-plus">+</span><p>Hours of Practice</p></div>
+          <div class="stat"><span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span><p>Passion for Clean Code</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title">Turning ideas into <span class="grad-text">reliable APIs</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="code-card reveal" aria-label="C# code snippet describing the developer">
+            <div class="code-head">
+              <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              <span class="code-file">DeveloperController.cs</span>
+            </div>
+<pre><code><span class="c">// Who am I? Just call the endpoint :)</span>
+<span class="a">[ApiController]</span>
+<span class="a">[Route("api/[controller]")]</span>
+<span class="k">public class</span> <span class="t">DeveloperController</span> : <span class="t">ControllerBase</span>
+{
+    <span class="a">[HttpGet]</span>
+    <span class="k">public</span> <span class="t">IActionResult</span> Get() =&gt;
+        Ok(<span class="k">new</span>
+        {
+            Name  = <span class="s">"Youssef Diab"</span>,
+            Track = <span class="s">".NET Backend"</span>,
+            Stack = <span class="k">new</span>[]
+            {
+                <span class="s">"C#"</span>, <span class="s">"ASP.NET Core"</span>,
+                <span class="s">"EF Core"</span>, <span class="s">"SQL Server"</span>
+            },
+            OpenToWork = <span class="k">true</span>
+        });
+}</code></pre>
+          </div>
+
+          <div class="about-text reveal">
+            <p>
+              I'm <strong>Youssef Diab</strong>, a backend developer focused on the .NET world. I enjoy turning
+              business requirements into reliable, well-structured systems — from designing the database and
+              modelling the domain to securing endpoints and writing clean, testable code.
+            </p>
+            <p>
+              I follow <strong>Clean Architecture</strong> and <strong>SOLID</strong> principles, care about
+              performance and readable code, and I'm constantly learning new tools to build better software.
+              I'm looking for opportunities where I can grow with a strong team and contribute to real products.
+            </p>
+
+            <ul class="info-grid">
+              <li><span>Name</span><strong>Youssef Diab</strong></li>
+              <li><span>Track</span><strong>Backend .NET</strong></li>
+              <li><span>Focus</span><strong>REST APIs &amp; Databases</strong></li>
+              <li><span>Status</span><strong class="ok">Available for work</strong></li>
+            </ul>
+
+            <div class="about-buttons">
+              <a href="#contact" class="btn btn-primary">Contact Me <i class="fa-solid fa-paper-plane"></i></a>
+              <a href="#projects" class="btn btn-outline">See Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Skills</span>
+          <h2 class="section-title">My <span class="grad-text">technical toolbox</span></h2>
+          <p class="section-sub">Technologies I use to design, build and ship backend systems.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Backend Development</h3>
+            <div class="tags">
+              <span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>Web API</span>
+              <span>MVC</span><span>Minimal APIs</span><span>LINQ</span><span>SignalR</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Databases &amp; ORM</h3>
+            <div class="tags">
+              <span>SQL Server</span><span>T-SQL</span><span>Entity Framework Core</span>
+              <span>Dapper</span><span>Migrations</span><span>Redis</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <h3>Architecture &amp; Patterns</h3>
+            <div class="tags">
+              <span>Clean Architecture</span><span>SOLID</span><span>Repository &amp; UoW</span>
+              <span>Dependency Injection</span><span>CQRS</span><span>OOP</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Security &amp; Auth</h3>
+            <div class="tags">
+              <span>JWT</span><span>ASP.NET Identity</span><span>Role-based Access</span>
+              <span>Validation</span><span>CORS</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Tools &amp; Workflow</h3>
+            <div class="tags">
+              <span>Git &amp; GitHub</span><span>Swagger / OpenAPI</span><span>Postman</span>
+              <span>Visual Studio</span><span>VS Code</span><span>Docker</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-flask-vial"></i></div>
+            <h3>Testing &amp; Quality</h3>
+            <div class="tags">
+              <span>xUnit</span><span>Moq</span><span>Unit Testing</span>
+              <span>FluentValidation</span><span>AutoMapper</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="learning reveal">
+          <i class="fa-solid fa-seedling"></i> Currently exploring:
+          <strong>Microservices</strong>, <strong>RabbitMQ</strong>, <strong>Docker</strong> &amp; <strong>CI/CD</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <!-- NOTE: these are sample projects. Replace titles, descriptions and links with your own work. -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Portfolio</span>
+          <h2 class="section-title">Featured <span class="grad-text">projects</span></h2>
+          <p class="section-sub">A selection of things I've built while learning and practicing.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="api" role="tab" aria-selected="false">APIs</button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card reveal" data-category="api">
+            <div class="project-thumb t1"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="project-body">
+              <h3>ShopHub E-Commerce API</h3>
+              <p>RESTful API with product catalog, cart, orders and payments. JWT authentication with role-based authorization.</p>
+              <div class="tags small"><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>JWT</span></div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="api">
+            <div class="project-thumb t2"><i class="fa-solid fa-list-check"></i></div>
+            <div class="project-body">
+              <h3>TaskFlow — Task Manager</h3>
+              <p>Task and team management API built with Clean Architecture, CQRS with MediatR and FluentValidation.</p>
+              <div class="tags small"><span>Clean Architecture</span><span>CQRS</span><span>MediatR</span><span>xUnit</span></div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-thumb t3"><i class="fa-solid fa-hospital"></i></div>
+            <div class="project-body">
+              <h3>MediCare — Clinic System</h3>
+              <p>Appointment booking and patient records web app with Identity, roles and an admin dashboard.</p>
+              <div class="tags small"><span>ASP.NET MVC</span><span>Identity</span><span>Bootstrap</span><span>SQL Server</span></div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-thumb t4"><i class="fa-solid fa-comments"></i></div>
+            <div class="project-body">
+              <h3>ChatWave — Real-time Chat</h3>
+              <p>Real-time messaging app with private and group rooms, online presence and message history.</p>
+              <div class="tags small"><span>SignalR</span><span>ASP.NET Core</span><span>JavaScript</span><span>EF Core</span></div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="api">
+            <div class="project-thumb t5"><i class="fa-solid fa-link"></i></div>
+            <div class="project-body">
+              <h3>Snip — URL Shortener</h3>
+              <p>Fast Minimal API that shortens links, tracks clicks and caches hot redirects with Redis.</p>
+              <div class="tags small"><span>Minimal APIs</span><span>Redis</span><span>Docker</span><span>Swagger</span></div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-thumb t6"><i class="fa-solid fa-book-open"></i></div>
+            <div class="project-body">
+              <h3>DevBlog Platform</h3>
+              <p>Blogging platform with posts, comments, tags, search and pagination, plus an author dashboard.</p>
+              <div class="tags small"><span>ASP.NET Core</span><span>Razor</span><span>EF Core</span><span>LINQ</span></div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-wrap reveal">
+          <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-github"></i> More on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== JOURNEY ===================== -->
+    <!-- NOTE: sample content. Replace with your real training, experience and education. -->
+    <section class="section section-alt" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Journey</span>
+          <h2 class="section-title">Experience &amp; <span class="grad-text">education</span></h2>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="timeline-col reveal">
+            <h3 class="col-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+            <ul class="timeline">
+              <li>
+                <span class="t-date">Present</span>
+                <h4>Backend .NET Developer Track</h4>
+                <p class="t-place">Training Program / Institute Name</p>
+                <p>Intensive practical training on C#, ASP.NET Core, EF Core, SQL Server, authentication and API design, with hands-on projects.</p>
+              </li>
+              <li>
+                <span class="t-date">Ongoing</span>
+                <h4>Personal Projects &amp; Open Practice</h4>
+                <p class="t-place">Self-directed</p>
+                <p>Building full APIs end-to-end, practicing Clean Architecture, writing unit tests and publishing the work on GitHub.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="timeline-col reveal">
+            <h3 class="col-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <ul class="timeline">
+              <li>
+                <span class="t-date">20XX – 20XX</span>
+                <h4>Bachelor's Degree</h4>
+                <p class="t-place">Your Faculty — Your University</p>
+                <p>Computer science fundamentals: data structures, algorithms, databases, OOP and software engineering.</p>
+              </li>
+              <li>
+                <span class="t-date">Certificates</span>
+                <h4>Courses &amp; Certifications</h4>
+                <p class="t-place">Add your certificates here</p>
+                <p>List relevant courses (e.g. C#, SQL, ASP.NET Core, Git) with the provider and the year.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title">Let's build something <span class="grad-text">together</span></h2>
+          <p class="section-sub">Have a project, an opportunity or just want to say hi? My inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <!-- EDIT: replace with your real email / phone -->
+            <a class="info-card" href="mailto:yousifdiab373@gmail.com">
+              <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
+              <span><small>Email</small><strong>yousifdiab373@gmail.com</strong></span>
+            </a>
+            <a class="info-card" href="tel:+201023998343">
+              <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+              <span><small>Phone</small><strong>+201023998343</strong></span>
+            </a>
+            <a class="info-card" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              <span class="info-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+              <span><small>LinkedIn</small><strong>linkedin.com/in/your-profile</strong></span>
+            </a>
+            <a class="info-card" href="https://github.com/yousifdiab373-web" target="_blank" rel="noopener">
+              <span class="info-icon"><i class="fa-brands fa-github"></i></span>
+              <span><small>GitHub</small><strong>github.com/yousifdiab373-web</strong></span>
+            </a>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
+                <span class="error" data-for="name"></span>
+              </div>
+              <div class="field">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required />
+                <span class="error" data-for="email"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Job opportunity / Project idea" required />
+              <span class="error" data-for="subject"></span>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about what you have in mind..." required></textarea>
+              <span class="error" data-for="message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Youssef Diab. All rights reserved.</p>
+      <ul class="socials small" aria-label="Social links">
+        <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+      <p class="made">Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
